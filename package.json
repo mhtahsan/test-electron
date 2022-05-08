@@ -1,0 +1,37 @@
+{
+  "name": "test",
+  "productName": "test",
+  "version": "1.0.0",
+  "description": "this is a test",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "test",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "c.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "installerIcon": "c.ico",
+      "uninstallerIcon": "c.ico",
+      "uninstallDisplayName": "untest",
+      "license": "license.md",
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "author": "tahsan",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^18.2.0",
+    "electron-builder": "^23.0.3"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  }
+}
